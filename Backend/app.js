@@ -4,7 +4,13 @@ const port = 3000;
 
 // Import koneksi dan model
 const sequelize = require('./configs/db.js');
-const Course = require('./models/courses.js');
+const User = require('./models/users.js');
+const Konsultan = require('./models/konsultans.js');
+const Admin = require('./models/admin.js');
+const Video = require('./models/video.js');
+const Transaksi = require('./models/transaksi.js');
+const Konsultasi = require('./models/konsultasi.js');
+const Modul = require('./models/modul.js');
 
 // Import router
 const homeRouter = require('./routes/home');

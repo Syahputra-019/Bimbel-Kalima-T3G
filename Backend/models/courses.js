@@ -1,8 +1,8 @@
 const { DataTypes } = require('sequelize');
-const sequelize = require('../db');
+const sequelize = require('../configs/db.js');
 
 // Definisikan model Course
-const Course = sequelize.define('Course', {
+const Courses = sequelize.define('Courses', {
   name: {
     type: DataTypes.STRING,
     allowNull: false
@@ -14,4 +14,4 @@ const Course = sequelize.define('Course', {
   timestamps: false
 });
 
-module.exports = Course;
+module.exports = Courses;

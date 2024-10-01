@@ -3,8 +3,8 @@ const app = express();
 const port = 3000;
 
 // Import koneksi dan model
-const sequelize = require('./db');
-const Course = require('./models/course');
+const sequelize = require('./configs/db.js');
+const Course = require('./models/courses.js');
 
 // Import router
 const homeRouter = require('./routes/home');
@@ -77,8 +77,8 @@ app.delete('/courses/:id', async (req, res) => {
   const port = 3000;
   
   // Import koneksi dan model
-  const sequelize = require('./db');
-  const Course = require('./models/course');
+  const sequelize = require('./configs/db.js');
+  const Course = require('./models/courses.js');
   
   // Import router
   const homeRouter = require('./routes/home');

@@ -7,6 +7,13 @@ const sequelize = new Sequelize('bimbel_db', 'root', '', {
   port: 3306 // Perbaiki port di sini
 });
 
+const db = {};
+
+db.Sequelize = Sequelize;
+db.sequelize = sequelize;
+
+db.courses = require("../models/courses.js")(db.sequelize, db.Sequelize)
+
 // Mengecek koneksi ke database
 sequelize.authenticate()
   .then(() => console.log('Koneksi ke database berhasil.'))

@@ -4,11 +4,12 @@
   "description": "Tugas Project UTS Kelompok 5",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon app.js"
   },
   "author": "Kelompok 5",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.20.3",
     "express": "^4.21.0",
     "mysql2": "^3.11.3",
     "nodemon": "^3.1.7",

@@ -1,29 +1,31 @@
 module.exports = (sequelize, Sequelize) => {
-    const transaksi = sequelize.define('transaksi', {
+    const Video = sequelize.define('Videos', {
       id: {
         type: Sequelize.INTEGER,
         primaryKey: true,
         autoIncrement: true
       },
-      user_id: {
+      title: {
+        type: Sequelize.STRING
+      },
+      description: {
+        type: Sequelize.TEXT
+      },
+      url: {
+        type: Sequelize.STRING
+      },
+      uploaded_by: {
         type: Sequelize.INTEGER,
         references: {
           model: 'Users',
           key: 'id'
         }
       },
-      amount: {
-        type: Sequelize.DECIMAL(10, 2)
-      },
-      status: {
-        type: Sequelize.ENUM,
-        values: ['pending', 'completed', 'failed']
-      },
-      transaction_date: {
+      created_at: {
         type: Sequelize.DATE,
         defaultValue: Sequelize.NOW
       }
     });
   
-    return transaksi;
+    return Video;
   };
